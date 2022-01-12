@@ -69,6 +69,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [std-pk
   * [`module-browser`](#module-browser)
   * [`modules.root`](#modulesroot)
   * [`jsnext:main`](#jsnextmain)
+  * [`exports`](#exports)
 - [metro](#metro)
   * [`react-native`](#react-native)
 - [webpack](#webpack)
@@ -761,6 +762,10 @@ There is also [`modules.resolver`](https://github.com/dherman/defense-of-dot-js/
 
 Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 
+### `exports`
+The "exports" field allows defining the entry points of a package when imported by name loaded either via a node_modules lookup or a self-reference to its own name. It is supported in Node.js 12+ as an alternative to the "main" that can support defining subpath exports and conditional exports while encapsulating internal unexported modules.
+
+Supported by: [Nodejs 12+](https://nodejs.org/api/packages.html#exports), see [webpack](https://webpack.js.org/guides/package-exports/).
 ## metro
 
 ### `react-native`
